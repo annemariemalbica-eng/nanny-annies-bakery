@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  /* Nanny Annie's brand palette — sage #809690 · blush #D4B8AB · dusty blue #96BDC6 · cream #F2EFEB.
+     Token names kept from the original build; values remapped to the brand.
+     Primary tokens use readable (deepened) shades of the brand hues so text/buttons pass contrast;
+     the exact brand swatches live in the -light tokens for soft, airy decorative fills. */
+
+  /* surfaces */
+  --color-mint-bg: #F2EFEB;       /* cream — page background */
+  --color-mint-surface: #FBFAF7;  /* lifted cream — cards, panels */
+
+  /* sage (primary) */
+  --color-emerald: #566860;       /* deep sage — links, icons, primary buttons, badges */
+  --color-emerald-dark: #41504A;  /* deeper sage — hovers, dark overlays */
+  --color-emerald-light: #809690; /* brand sage — airy decorative fills */
+
+  /* blush (secondary accent) */
+  --color-orange: #9A6E5F;        /* deep blush-rose — accent text, small labels */
+  --color-orange-dark: #855B4D;   /* deeper rose — hover */
+  --color-orange-light: #D4B8AB;  /* brand blush — soft fills */
+
+  /* dusty blue (tertiary accent) */
+  --color-blue: #96BDC6;          /* brand blue — soft fills */
+  --color-blue-deep: #5E8794;     /* readable blue — accents */
+  --color-blush: #D4B8AB;         /* brand blush — soft fills */
+
+  /* soft section washes — her exact hues over cream (Primary sage · Secondary blush + blue) */
+  --color-sage-wash: #E0E8E4;
+  --color-blush-wash: #F0E2DA;
+  --color-blue-wash: #E2EDEF;
+
+  /* ink + lines */
+  --color-forest-text: #33403A;   /* deep sage-charcoal — headings + body text */
+  --color-sage: #66726B;          /* muted greige — secondary text */
+  --color-mint-border: #E5DBD0;   /* warm cream border */
+  --color-charcoal: #34423B;      /* deep sage — replaces the off-palette neutral (footer, anchors) */
+  --color-charcoal-light: #4A574F;
+
+  /* type — matches brand materials: typewriter + script */
+  --font-heading: 'Courier Prime', 'Courier New', monospace;
+  --font-script: 'Dancing Script', cursive;
+  --font-body: 'Karla', 'Open Sans', sans-serif;
+}
+
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-forest-text);
+  background-color: var(--color-mint-bg);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+/* ── Scroll animations ── */
+.animate-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children .animate-in:nth-child(1) { transition-delay: 0s; }
+.stagger-children .animate-in:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children .animate-in:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children .animate-in:nth-child(4) { transition-delay: 0.2s; }
+
+/* ── Button hover ── */
+.btn-primary {
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ── Card hover ── */
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Product card image zoom ── */
+.product-card img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ── Nav link underline slide ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-emerald);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ── Form focus states ── */
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: var(--color-emerald) !important;
+  box-shadow: 0 0 0 3px rgba(86, 104, 96, 0.18);
+}
+
+/* ── Quantity button ── */
+.qty-btn {
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.qty-btn:active {
+  transform: scale(0.9);
+}
+
+/* ── Sticky nav ── */
+.nav-scrolled {
+  background-color: rgba(242, 239, 235, 0.92) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* ── Grain texture overlay ── */
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ── Texture background ── */
+.texture-bg {
+  background-image: url('/assets/impact_texture.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ── Organic decorative blob ── */
+.organic-blob {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+/* ── Stat counter animation ── */
+.stat-counter {
+  display: inline-block;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .btn-primary,
+  .card-hover,
+  .product-card img,
+  .nav-link::after {
+    transition: none;
+  }
+}

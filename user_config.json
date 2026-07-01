@@ -1,0 +1,61 @@
+{
+  "site_name": "Nanny Annie's Bakery",
+  "tagline": "Baking with Purpose",
+  "mission": "Training individuals with IDD/ASD for competitive employment through a structured, research-backed bakery program.",
+  "owner_name": "Anne Malbica PhD, BCBA, LBA",
+  "email": "annemariemalbica@gmail.com",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "colors": {
+    "primary": "#809690",
+    "secondary": "#D4B8AB",
+    "accent": "#96BDC6",
+    "background": "#F2EFEB",
+    "surface": "#FBFAF7",
+    "text": "#33403A"
+  },
+  "fonts": {
+    "heading": "Courier Prime",
+    "script": "Dancing Script",
+    "body": "Karla"
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": ""
+  },
+  "analytics_id": "",
+  "formspree_id": "",
+  "products": [
+    {
+      "id": "sourdough",
+      "name": "Artisan Sourdough",
+      "price": 800,
+      "description": "Hand-crafted sourdough bread, baked fresh daily.",
+      "image": "/assets/bread_product.png"
+    },
+    {
+      "id": "cookies",
+      "name": "Chocolate Chip Cookies",
+      "price": 600,
+      "description": "Classic chocolate chip cookies made with love.",
+      "image": "/assets/cookie_product.png"
+    },
+    {
+      "id": "cinnamon-rolls",
+      "name": "Cinnamon Rolls",
+      "price": 700,
+      "description": "Warm cinnamon rolls with cream cheese frosting.",
+      "image": "/assets/pastry_product.png"
+    },
+    {
+      "id": "scones",
+      "name": "Blueberry Scones",
+      "price": 500,
+      "description": "Flaky blueberry scones, perfect with coffee.",
+      "image": "/assets/scone_product.png"
+    }
+  ]
+}
