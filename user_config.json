@@ -31,30 +31,30 @@
   "products": [
     {
       "id": "sourdough",
-      "name": "Artisan Sourdough",
-      "price": 800,
-      "description": "Hand-crafted sourdough bread, baked fresh daily.",
+      "name": "Kamut Artisan Sourdough",
+      "price": 1600,
+      "description": "Hand-crafted kamut flour sourdough bread, baked fresh daily.",
       "image": "/assets/bread_product.png"
     },
     {
       "id": "cookies",
-      "name": "Chocolate Chip Cookies",
+      "name": "Sourdough Chocolate Chip Cookies",
       "price": 600,
-      "description": "Classic chocolate chip cookies made with love.",
+      "description": "3 Classic chocolate chip cookies made with love.",
       "image": "/assets/cookie_product.png"
     },
     {
-      "id": "cinnamon-rolls",
-      "name": "Cinnamon Rolls",
+      "id": "Pumpkin",
+      "name": "Sourdough Pumpkin Cookies",
       "price": 700,
-      "description": "Warm cinnamon rolls with cream cheese frosting.",
+      "description": "3 pumpkin chocolate chip cookies.",
       "image": "/assets/pastry_product.png"
     },
     {
       "id": "scones",
-      "name": "Blueberry Scones",
+      "name": "Sourdough Scones",
       "price": 500,
-      "description": "Flaky blueberry scones, perfect with coffee.",
+      "description": "Flaky scones, perfect with coffee butter and jam.",
       "image": "/assets/scone_product.png"
     }
   ]
