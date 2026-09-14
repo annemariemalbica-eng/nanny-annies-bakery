@@ -34,14 +34,14 @@
       "name": "Kamut Artisan Sourdough",
       "price": 1600,
       "description": "Hand-crafted kamut flour sourdough bread, baked fresh daily.",
-      "image": "/assets/bread_product.png"
+      "image": "/assets/Rustic.png"
     },
     {
       "id": "cookies",
       "name": "Sourdough Chocolate Chip Cookies",
       "price": 600,
       "description": "3 Classic chocolate chip cookies made with love.",
-      "image": "/assets/cookie_product.png"
+      "image": "/assets/CC Cookies.png"
     },
     {
       "id": "Pumpkin",
@@ -55,7 +55,7 @@
       "name": "Sourdough Scones",
       "price": 500,
       "description": "Flaky scones, perfect with coffee butter and jam.",
-      "image": "/assets/Scones.jpeg"
+      "image": "/assets/Scones.png"
     }
   ]
 }
