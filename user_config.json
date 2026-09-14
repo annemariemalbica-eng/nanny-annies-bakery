@@ -48,14 +48,14 @@
       "name": "Sourdough Pumpkin Cookies",
       "price": 700,
       "description": "3 pumpkin chocolate chip cookies.",
-      "image": "/assets/pastry_product.png"
+      "image": "/assets/Pumpkin Cookies.png"
     },
     {
       "id": "scones",
       "name": "Sourdough Scones",
       "price": 500,
       "description": "Flaky scones, perfect with coffee butter and jam.",
-      "image": "/assets/scone_product.png"
+      "image": "/assets/Scones.png"
     }
   ]
 }
